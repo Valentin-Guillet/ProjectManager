@@ -69,8 +69,8 @@ def format_directory(item, folder, nb_ws=0):
             annotation = '{} workspaces'.format(nb_ws)
         return sublime.QuickPanelItem(
             item,
-            '<a href=\'subl:open_dir {"dir": "%s"}\'>%s</a>' % (
-                folder, pretty_path(folder)),
+            '<a href="%s">%s</a>' % (sublime.command_url('open_dir', {'dir': folder}),
+                                     pretty_path(folder)),
             annotation)
     else:
         return [item, pretty_path(folder)]
@@ -84,7 +84,8 @@ def format_files(item, paths):
             name = os.path.basename(path)
             if length + len(name) > 85:
                 name = name[:85-length-len(name)]
-            details += '<a href=\'subl:open_file {"file": "%s"}\'>%s</a>' % (path, name)
+            details += '<a href="%s">%s</a>' % (
+                sublime.command_url('open_file', {'file': path}), name)
             length += len(name)
 
             if length >= 80:
