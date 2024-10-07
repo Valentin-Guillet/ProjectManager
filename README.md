@@ -18,7 +18,7 @@ In addition, I made a few other modifications such as:
 This fork can be installed via Package Control by adding this repository in Sublime Text in this way:
 - If `ProjectManager` is already installed, remove it using `Package Control: Remove Package`
 - In the Command Palette, choose `Package Control: Add Repository`
-- Enter the path to this Github page, i.e. https://github.com/Val95240/ProjectManager
+- Enter the path to this Github page, i.e. https://github.com/Valentin-Guillet/ProjectManager
 - Follow the same instructions as for the original plugin, described below
 
 To revert back to the original package, simply uninstall `ProjectManager`, remove this repository via `Package Control: Remove Repository` and reinstall `ProjectManager` (the standard version will be selected).
